@@ -1,10 +1,11 @@
 import './App.css';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div >
       <header className="App-header">
-        <p>Hello, React 18!</p>
+        <Header />
       </header>
     </div>
   );
