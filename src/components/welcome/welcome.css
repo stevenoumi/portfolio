@@ -1,0 +1,77 @@
+.welcome-conatiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100vw 85vh;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("/public/unicolor.png");
+    overflow: hidden;
+}
+.welcome-table {
+    background-color: aliceblue;
+    width: 60vw;
+    display: flex;
+    margin-top: 10vh
+    
+}
+
+.welcome-image-container {
+    background-color: aliceblue;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-text-container {
+    background-color: aliceblue;
+    width: 30vw;
+    padding-left: 3vw;
+    padding-top: 5vh;
+}
+
+.welcome-text-container h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.welcome-text-container h6 {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.welcome-text-container h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.welcome-social-media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #495057;
+}
+.welcome-icone {
+    font-size: 2rem !important;
+    color: #fff;
+    margin: 1rem;
+}
+
+
+.welcome-presentation {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    margin-top: 7vh;
+    text-align: center;
+    height: 40vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}

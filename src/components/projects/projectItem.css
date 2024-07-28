@@ -1,0 +1,52 @@
+.project-item-container {
+    display: flex;
+    justify-content: space-between;
+    max-height: 70vh;
+    max-width: 62vw;
+    background-color: #495057;
+    color : #fff;
+    margin-top: 5vh ;
+  }
+  
+  .project-item-image {
+    height: 100% !important;
+    width: 25vw !important;
+    object-fit: cover;
+
+  }
+
+.project-item-text {
+    height: 100% !important;
+    width: 35vw !important;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1vw;
+    padding-top: 6vh;
+    font-family: 'Times New Roman';
+}
+.project-item-title {
+   
+    padding-left: 2vw;
+    border-left: 1vw solid gray;
+
+}
+
+.project-item-description {
+    padding-left: 3vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    text-align: justify;
+}
+
+.projectitem-icone {
+  font-size: 2rem !important;
+  color: #fff;
+  margin: 0.4rem 1rem;
+}
+
+.project-item-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
