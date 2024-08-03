@@ -20,7 +20,7 @@ root.render(
                   <Route  path="/projets" component={Project} />
                   <Route path="/experience" component={ExperiencePage} />
                   <Route path="/formation" component={FormationPage} />
-                  <Route path="/contact" component={ContactPage} />
+                  <Route path="/contact" component={ContactPage} /> 
                 </Switch>
               </Router>
   </React.StrictMode>

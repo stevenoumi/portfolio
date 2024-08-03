@@ -8,30 +8,72 @@
     background-attachment: fixed;
     background-image: url("/public/unicolor.png");
     overflow: hidden;
+    margin-top: 15vh;
 }
-.welcome-table {
+ /* Définition de l'animation pour l'apparition */
+ @keyframes fadeIn {
+    0% {
+      opacity: 0; /* Commence invisible */
+      transform: scale(0.95); /* Légèrement réduit pour un effet de zoom */
+    }
+    100% {
+      opacity: 1; /* Devient complètement visible */
+      transform: scale(1); /* Retourne à la taille normale */
+    }
+  }
+
+  /* Styles pour l'élément avec animation */
+  .welcome-table {
     background-color: aliceblue;
     width: 60vw;
     display: flex;
-    margin-top: 10vh
-    
-}
+    margin-top: 10vh;
+    animation: fadeIn 1s ease-out; /* Appliquer l'animation */
+  }
 
-.welcome-image-container {
+   /* Définition de l'animation */
+   @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%); /* Commence hors de l'écran à gauche */
+      opacity: 0; /* Commence invisible */
+    }
+    100% {
+      transform: translateX(0); /* Arrive à sa position finale */
+      opacity: 1; /* Devient complètement visible */
+    }
+  }
+
+  /* Styles de l'élément avec animation */
+  .welcome-image-container {
     background-color: aliceblue;
     width: 30vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+    animation: slideInFromLeft 1s ease-out; /* Appliquer l'animation */
+  }
 
-.welcome-text-container {
+/* Définition de l'animation */
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%); /* Commence hors de l'écran à droite */
+      opacity: 0; /* Commence invisible */
+    }
+    100% {
+      transform: translateX(0); /* Arrive à sa position finale */
+      opacity: 1; /* Devient complètement visible */
+    }
+  }
+
+  /* Styles de l'élément avec animation */
+  .welcome-text-container {
     background-color: aliceblue;
     width: 30vw;
     padding-left: 3vw;
     padding-top: 5vh;
-}
+    animation: slideInFromRight 1s ease-out; /* Appliquer l'animation */
+  }
 
 .welcome-text-container h1 {
     font-size: 1.7rem;
@@ -52,12 +94,26 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.welcome-social-media-container {
+   /* Définition de l'animation */
+   @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%); /* Commence hors de l'écran en bas */
+      opacity: 0; /* Commence invisible */
+    }
+    100% {
+      transform: translateY(0); /* Arrive à sa position finale */
+      opacity: 1; /* Devient complètement visible */
+    }
+  }
+
+  /* Styles de l'élément avec animation */
+  .welcome-social-media-container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #495057;
-}
+    animation: slideInFromBottom 1s ease-out; /* Appliquer l'animation */
+  }
 .welcome-icone {
     font-size: 2rem !important;
     color: #fff;

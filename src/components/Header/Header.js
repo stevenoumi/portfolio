@@ -14,7 +14,7 @@ function Header() {
 
   return (
     <div>
-      <AppBar position="relative" className="header-container">
+      <AppBar position="fixed" className="header-container">
         <Toolbar>
           <Stack direction="row" spacing={2} sx={{ flexGrow: 1 }}>
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' , display: 'flex', alignItems: 'center'}}>
@@ -66,9 +66,9 @@ function Header() {
                 CONTACT
               </Typography>
             </Link>
-            <Button color="inherit" onClick={() => changeLanguage("fr")}>
+            {/* <Button color="inherit" onClick={() => changeLanguage("fr")}>
               FR
-            </Button>
+            </Button> */}
           </Stack>
         </Toolbar>
       </AppBar>
