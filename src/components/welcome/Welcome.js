@@ -24,7 +24,7 @@ function Welcome() {
                 src="profile.png"
               />
             </Stack>
-            <Stack direction="column" spacing={3} className="welcome-text-container">
+            <Stack direction="column" spacing={3.5} className="welcome-text-container">
               <div>
                 <Typography variant="h1">
                   Steve Darius NDE NOUMI
@@ -33,7 +33,7 @@ function Welcome() {
                   ETUDIANT INGENIEUR EN INFORMATIQUE
                 </Typography>
               </div>
-              <Stack direction="row" spacing={3} className="welcome_infos_row">
+              <Stack direction="row" spacing={3.5} className="welcome_infos_row">
                 <div className="contact_infos_icon">
                   <EmailIcon fontSize='2rem' />
                 </div>
@@ -42,7 +42,7 @@ function Welcome() {
                   <h6> adress@yahoo.com </h6>
                 </div>
               </Stack>
-              <Stack direction="row" spacing={3} className="welcome_infos_row">
+              <Stack direction="row" spacing={3.5} className="welcome_infos_row">
                 <div className="contact_infos_icon">
                   <PhoneIcon fontSize='2rem' />
                 </div>
@@ -51,7 +51,7 @@ function Welcome() {
                   <h6>6 99 99 99 99 </h6>
                 </div>
               </Stack>
-              <Stack direction="row" spacing={3} className="welcome_infos_row">
+              <Stack direction="row" spacing={3.5} className="welcome_infos_row">
                 <div className="contact_infos_icon">
                   <CalendarMonthIcon fontSize='2rem' />
                 </div>
@@ -60,7 +60,7 @@ function Welcome() {
                   <h6>30 Octobre 2003</h6>
                 </div>
               </Stack>
-              <Stack direction="row" spacing={3} className="welcome_infos_row">
+              <Stack direction="row" spacing={3.5} className="welcome_infos_row">
                 <div className="contact_infos_icon">
                   <LocationOnIcon fontSize='2rem' />
                 </div>

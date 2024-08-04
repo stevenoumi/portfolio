@@ -1,6 +1,19 @@
 import React from 'react';
+import { useState } from 'react';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
+import { Divider } from '@mui/material';
+import { TextField } from '@mui/material';
+import { IconButton } from '@mui/material';
+
 import {
-  Box,
   Stepper,
   Step,
   StepLabel,
@@ -14,9 +27,12 @@ import { CardMedia } from "@mui/material";
 import { Stack } from "@mui/material";
 import { PieChart } from '@mui/x-charts';
 import { Gauge } from '@mui/x-charts';
+import './experience.css';
+import { ExpandMore, ExpandLess } from '@mui/icons-material';
 
 
 const experiences = [
+
   {
     label: 'Software Engineer at Company A',
     date: 'January 2022 - Present',
@@ -40,127 +56,110 @@ const experiences = [
 ];
 
 function Experience() {
-  const [activeStep, setActiveStep] = React.useState(0);
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
+  const [expandedStep, setExpandedStep] = useState(null);
+  const handleExpandClick = (index) => {
+    setExpandedStep(expandedStep === index ? null : index);
   };
 
   return (
-    <Box sx={{ maxWidth: 1000, margin: '0 auto', backgroundColor: colors.grey[50]}}>
-      <Stepper activeStep={activeStep} orientation="vertical">
-        {experiences.map((experience, index) => (
-          <Step key={experience.label}>
-            <StepLabel>
-              <Typography variant="h6">{experience.label}</Typography>
-              <Typography variant="subtitle2">{experience.date}</Typography>
-            </StepLabel>
-            <StepContent>
-              <Stack
-                direction="row"
-                spacing={1}
-                
-                className="project-item-container">
+    <div className="experience_container">
+      <Stack spacing={2} direction="row" className="experience_stack_container">
+        <div className="experience_left">
+          <Stack direction="column" className="experience_infos_container">
+            <CardMedia
+              component="img"
+              alt="profile picture"
+              src="my-avatar.png"
+              className='experience_profile_picture'
+            />
+            <div>
+              <h2> Darius NOUMI</h2>
+              <div className='experience_infos_title'>
+                <h4>Etudiant ingenieur</h4>
+              </div>
+            </div>
 
-                <Stack direction="column" spacing={2} className="project-item-text" >
-                  <div className="project-item-title">
-                    <Typography
-                      variant="h5"
-                      fontFamily={"times new roman"}
-                      mb={1}
-                    >
-                      {experience.label}
-                    </Typography>
-                    <Typography
-                      variant="subtitle1"
-                      fontFamily={"times new roman"}
-                      fontSize={20}
-                      color={colors.green[500]}
-                    >
-                      {experience.date}
-                    </Typography>
-                  </div>
-                  <p className="project-item-description">
-                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. lorem ipsum dolor sit amet, consectetur
-                  </p>
-                  <Stack direction="row" spacing={10} className="project-item-skills">
-                    
-                    <div>
-                      <PieChart
-                        series={[
-                          {
-                            data: [
-                              { id: 0, value: 10, label: 'first skill' },
-                              { id: 1, value: 15, label: 'second skill' },
-                              { id: 2, value: 20, label: 'third skill' },
-                            ],
-                          },
-                        ]}
-                        width={300}
-                        height={100}
-                        colors={['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', '#E6B333', '#3366E6', '#999966']}
-                      />
-
-                    </div>
-                    <div>
-                      <Gauge width={110} height={160} value={90}
-                        fill="black"
-                      
-                      />
-
-                    </div>
-                  </Stack>
-
-                </Stack>
-                <Stack direction="column" spacing={2} className="project-item-image">
-
-                  <CardMedia
-                    component="img"
-                    src="profile.png"
-                    alt="random"
-                    className="project-item-image"
-                  />
-                </Stack>
-              </Stack>              <Box sx={{ mb: 2 }}>
-                <div>
-                  <Button
-                    variant="contained"
-                    onClick={handleNext}
-                    sx={{ mt: 1, mr: 1 }}
-                    disabled={index === experiences.length }
-                  >
-                    {index === experiences.length -1 ? 'Terminer' : 'Suivant'}
-                  </Button>
-                  <Button
-                    onClick={handleBack}
-                    sx={{ mt: 1, mr: 1 }}
-                    disabled={index === 0}
-                  >
-                    Précédent
-                  </Button>
+            <Divider className='experience_divider' />
+            < Stack direction="column" spacing={2}>
+              <Stack direction="row" spacing={3} className="experience_infos_row">
+                <div className="experience_infos_icon">
+                  <EmailIcon fontSize='2rem' />
                 </div>
-              </Box>
-            </StepContent>
-          </Step>
-        ))}
-      </Stepper>
-      {activeStep === experiences.length   && (
-        <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>Vous avez vu toutes les expériences.</Typography>
-          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }} variant='contained' color='success'>
-            Réinitialiser
-          </Button>
-        </Paper>
-      )}
-    </Box>
+                <div>
+                  <h5>Email:</h5>
+                  <h6> adress@yahoo.com </h6>
+                </div>
+              </Stack>
+              <Stack direction="row" spacing={3} className="experience_infos_row">
+                <div className="experience_infos_icon">
+                  <PhoneIcon fontSize='2rem' />
+                </div>
+                <div>
+                  <h5>Telephone:</h5>
+                  <h6>6 99 99 99 99 </h6>
+                </div>
+              </Stack>
+              <Stack direction="row" spacing={3} className="experience_infos_row">
+                <div className="experience_infos_icon">
+                  <CalendarMonthIcon fontSize='2rem' />
+                </div>
+                <div>
+                  <h5>Date de naissance:</h5>
+                  <h6>30 Octobre 2003</h6>
+                </div>
+              </Stack>
+              <Stack direction="row" spacing={3} className="experience_infos_row">
+                <div className="experience_infos_icon">
+                  <LocationOnIcon fontSize='2rem' />
+                </div>
+                <div>
+                  <h5> Adresse :</h5>
+                  <h6> Nantes, France </h6>
+                </div>
+              </Stack>
+              <Stack direction="row" spacing={3} className="experience_infos_row_icon">
+                <GitHubIcon fontSize='small' />
+                <LinkedInIcon fontSize='small' />
+                <FacebookIcon fontSize='small' />
+                <TwitterIcon fontSize='small' />
+              </Stack>
+            </Stack>
+          </Stack>
+        </div>
+        <div className="experience_right">
+          <Stack direction="column" className="experience_form_container" spacing={2}>
+            <div className='experience__stepper_container'>
+              <Stack direction="row" spacing={2} className="experience__header">
+                <MenuBookOutlinedIcon fontSize='large' />
+                <h1> Mes experiences</h1>
+              </Stack>
+              <Stepper orientation="vertical" position = "fixed">
+                {experiences.map((experience, index) => (
+                  <Step key={experience.label}>
+                    <StepLabel>
+                      <Typography variant="h6">{experience.label}</Typography>
+                      <Typography variant="subtitle2">{experience.date}</Typography>
+                      <Stack direction="row" alignItems="center">
+                        <Typography variant="body1" sx={{ width: '40vw', fontSize: '0.8rem' }}>
+                          {expandedStep === index ? experience.description : `${experience.description.substring(0, 50)}...`}
+                        </Typography>
+                        <IconButton onClick={() => handleExpandClick(index)}>
+                          {expandedStep === index ? <ExpandLess /> : <ExpandMore />}
+                        </IconButton>
+                      </Stack>
+                    </StepLabel>
+
+                  </Step>
+                ))}
+              </Stepper>
+            </div>
+            
+          </Stack>
+        </div>
+      </Stack>
+    </div>
+
   );
 }
 
