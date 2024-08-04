@@ -1,0 +1,320 @@
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+@import url('https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.css');
+
+.about_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 1%;
+  margin-top: 14vh;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.about_stack_container {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  width: 90%;
+  height: 100%;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    /* Commence hors de l'écran à gauche */
+    opacity: 0;
+    /* Commence invisible */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Arrive à sa position finale */
+    opacity: 1;
+    /* Devient complètement visible */
+  }
+}
+
+/* Styles de l'élément avec animation */
+.about_left {
+  width: 20%;
+  height: 80vh;
+  background-color: #495057;
+  position: fixed;
+  left: 10%;
+  border-radius: 10px;
+  padding-bottom: 1.5%;
+  animation: slideInFromLeft 1.5s ease-out;
+}
+
+.about_infos_container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #f9f9f9;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 7%;
+}
+
+.about_infos_title {
+  text-align: center;
+  background-color: #4c5259a3 !important;
+  box-shadow: 0 0 2px whitesmoke;
+  max-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  border-radius: 5px;
+}
+
+/* Définition de l'animation */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    /* Commence hors de l'écran à droite */
+    opacity: 0;
+    /* Commence invisible */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Arrive à sa position finale */
+    opacity: 1;
+    /* Devient complètement visible */
+  }
+}
+
+/* Styles de l'élément avec animation */
+.about_right {
+  width: 65%;
+  max-width: 60vw;
+  height: 100%;
+  float: right;
+  background-color: #495057;
+  color: #f9f9f9;
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+  left : 13.5%;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  padding-bottom: 1%;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
+  animation: slideInFromRight 1.5s ease-out;
+  /* Appliquer l'animation */
+}
+
+.about_form_input {
+  width: 96%;
+
+}
+.about__header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif !important;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.about_profile_picture {
+  width: 50% !important;
+  border-radius: 10px;
+  border: 1px solid #f9f9f9;
+}
+
+.about_divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+}
+
+.about_infos_row {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 0.1%;
+  min-width: 100%;
+}
+
+.about_infos_row h6 {
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+.about_infos_row h5 {
+
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.about_infos_icon {
+  font-size: 1.5rem !important;
+  color: #f9f9f9;
+  margin: 10%;
+  background-color: #495057;
+  border-radius: 20%;
+  box-shadow: 0 0 2px whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.about_infos_row_icon {
+
+  margin-top: 10% !important;
+}
+
+.about_form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.about_form_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
+}
+
+
+.about_form_expertise {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 0.1%;
+  border: #f9f9f9 1px solid;
+  border-radius: 10px;
+  width: 20vw;
+  padding: 5%;
+  box-shadow: 0 0 2px #f9f9f9;
+
+}
+
+.about_form_expertise h6 {
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+.about_form_expertise h5 {
+
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.about_form_awards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  margin: 0.1%;
+  border: #f9f9f9 1px solid;
+  border-radius: 10px;
+  width: 80%;
+  padding: 2%;
+  box-shadow: 0 0 1px #f9f9f9;
+
+}
+
+.about_form_awards h6 {
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+.about_form_awards h5 {
+
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.about_form_recommendations{
+  display: flex;
+  width: 55vw;
+  align-items: center;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  white-space: nowrap; /* Empêche le retour à la ligne des éléments enfants */
+  padding: 10px; 
+  padding-top: 10%;
+}
+
+.about_form_recomandations_item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 0.1%;
+  border: #f9f9f9 1px solid;
+  border-radius: 10px;
+  width: 25vw;
+  margin-bottom: 1% !important;
+  box-shadow: 0 0 2px #495057;
+}
+.about_form_recomandations_item_avatar {
+  width: 80px !important;
+  border-radius: 10%;
+  border: 1px solid #f9f9f9;
+  background-color: #51565bfe;
+  position: relative;
+  left: 5%;
+  top: -50%;
+
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  fill: rgba(0, 0, 0, 0.38) !important;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: none !important;
+}
+
+.css-8t49rw-MuiStepConnector-line {
+  display: block;
+  border-color: #495057 !important;
+  border-left-style: solid;
+  border-left-width: 2px !important;
+  min-height: 24px !important;
+}
+
+.css-117w1su-MuiStepIcon-text {
+  fill: #495057 !important;
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+
+

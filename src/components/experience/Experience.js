@@ -10,23 +10,16 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import { Divider } from '@mui/material';
-import { TextField } from '@mui/material';
 import { IconButton } from '@mui/material';
 
 import {
   Stepper,
   Step,
   StepLabel,
-  StepContent,
-  Typography,
-  Paper,
-  Button,
-  colors
+  Typography
 } from '@mui/material';
 import { CardMedia } from "@mui/material";
 import { Stack } from "@mui/material";
-import { PieChart } from '@mui/x-charts';
-import { Gauge } from '@mui/x-charts';
 import './experience.css';
 import { ExpandMore, ExpandLess } from '@mui/icons-material';
 
@@ -74,7 +67,7 @@ function Experience() {
               className='experience_profile_picture'
             />
             <div>
-              <h2> Darius NOUMI</h2>
+              <h2> Steve Darius NOUMI</h2>
               <div className='experience_infos_title'>
                 <h4>Etudiant ingenieur</h4>
               </div>
@@ -134,7 +127,8 @@ function Experience() {
                 <MenuBookOutlinedIcon fontSize='large' />
                 <h1> Mes experiences</h1>
               </Stack>
-              <Stepper orientation="vertical" position = "fixed">
+              <Divider sx={{ width: '6%', backgroundColor: "#f9f9f9", height: '4px', borderRadius: '5px' }} />
+              <Stepper orientation="vertical" position="fixed" sx={{marginTop: '5%'}}>
                 {experiences.map((experience, index) => (
                   <Step key={experience.label}>
                     <StepLabel>
@@ -154,7 +148,7 @@ function Experience() {
                 ))}
               </Stepper>
             </div>
-            
+
           </Stack>
         </div>
       </Stack>

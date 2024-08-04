@@ -30,7 +30,7 @@ function Header() {
             <Typography 
             variant="h1"
             >
-              Darius NOUMI  /
+              Steve Darius NOUMI  /
             </Typography>
             <Typography
              variant="h6"
@@ -41,7 +41,7 @@ function Header() {
             </Link>
           </Stack>
           <Stack direction="row" spacing={4}>
-            <Link to="/a-propos" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
               <Typography variant="h6">
                 A PROPOS
               </Typography>

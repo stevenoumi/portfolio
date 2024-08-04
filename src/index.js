@@ -8,6 +8,7 @@ import './index.css';
 import ExperiencePage from './pages/ExperiencePage';
 import FormationPage from './pages/FormationPage';
 import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +22,7 @@ root.render(
                   <Route path="/experience" component={ExperiencePage} />
                   <Route path="/formation" component={FormationPage} />
                   <Route path="/contact" component={ContactPage} /> 
+                  <Route path="/about" component={AboutPage} />
                 </Switch>
               </Router>
   </React.StrictMode>

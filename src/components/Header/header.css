@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #f8f9fa !important;
-  color: #495057 !important;
-  border-bottom: 1px solid #e9ecef;
+  color: #f9f9f9;
   vertical-align: center !important;
+  background-color: #495057 !important;
+
 }
 
 .header-container h1 {
@@ -33,15 +33,15 @@
   padding: 0.375rem 0.75rem;
   cursor: pointer;
   height: 1.5rem;
-  background-color: #495057;
-  color: #fff;
+  background-color: #f9f9f9;
+  color: #495057;
   width: 1.5rem;
 }
 
 .header-container button:hover {
-  color: #343a40;
-  background-color: #fff;
-  border: 1px solid #495057;
+  color: #fff;
+  background-color: #343a40;
+  border: 1px solid #f9f9f9
 }
 
 .header-profession {

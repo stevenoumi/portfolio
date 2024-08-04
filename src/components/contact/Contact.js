@@ -10,7 +10,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Map from './Map';
 import './contact.css';
 
 function Contact() {
@@ -26,7 +25,7 @@ function Contact() {
                             className='contact_profile_picture'
                         />
                         <div>
-                            <h2> Darius NOUMI</h2>
+                            <h2> Steve Darius NOUMI</h2>
                             <div className='contact_infos_title'>
                                 <h4>Etudiant ingenieur</h4>
                             </div>
@@ -82,7 +81,6 @@ function Contact() {
                 <div className="contact_right">
                     <Stack direction="column" className="contact_form_container" spacing={2}>
                         <div className="contact_map">
-                            {/* <Map/> */}
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2705.661468177012!2d-1.553282684398829!3d47.21837157915989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805e4f9c1d3d4e5%3A0x3f1e4b6b3e3e7d1d!2sNantes!5e0!3m2!1sfr!2sfr!4v1634761591407!5m2!1sfr!2sfr" width="99%" height="96%" style={{ border: 0 }} allowfullscreen="" loading="lazy"></iframe>
                         </div>
                         <div>
@@ -106,9 +104,11 @@ function Contact() {
                                     className="contact_form_input"
 
                                 />
+                                <div className="contact_form_button_container">
                                 <Button variant="contained" className='contact_form_button'>
                                     Envoyer votre message
                                 </Button>
+                                </div>
 
                             </Stack>
                         </div>

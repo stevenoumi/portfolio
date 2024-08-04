@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80vh;
     padding-top: 1%;
     padding-bottom: 1%;
     margin-top: 15vh;
@@ -17,12 +16,9 @@
 .contact_stack_container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     width: 90%;
     height: 100%;
-
-
-
 }
 
 @keyframes slideInFromLeft {
@@ -42,6 +38,9 @@
     height: 100%;
     background-color: #495057;
     border-radius: 10px;
+    height: 80vh;
+    position: fixed;
+    left: 10%;
     padding-bottom: 1%;
     animation: slideInFromLeft 1.5s ease-out; /* Appliquer l'animation */
   }
@@ -85,10 +84,13 @@
     width: 60%;
     height: 100%;
     float: right;
-    background-color: #bbbec2;
+    background-color: #495057;
+    color: #f9f9f9;
     border-radius: 10px;
     display: flex;
     justify-content: center;
+    position: relative;
+    left: 9%;
     padding: 0.5%;
     padding-bottom: 1%;
     font-family: 'Times New Roman', Times, serif;
@@ -162,10 +164,10 @@
 }
 
 .contact_map {
-    width: 50vw;
-    height: 50%;
+    width: 54vw;
+    height: 50vh;
     border-radius: 10px;
-    background-color: #495057;
+    background-color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,12 +192,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    background-color: #495057 !important;
-    color: #f9f9f9;
+    width: 30%;
+    background-color: #f9f9f9 !important;
+    color: #495057 !important;
+    border-radius: 0.5rem !important;
+    padding: 0.7rem 0.75rem !important;
 }
-
+.contact_form_button_container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
 .contact_form_button:hover {
     background-color: #495057b6 !important;
-    color: #f9f9f9;
+    color: #f9f9f9 !important;
 }
