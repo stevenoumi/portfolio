@@ -32,7 +32,7 @@ function ProjectCategory() {
                             {category.title}
                         </Typography>
                         <Typography variant="body1" >
-                            {category.description}
+                            {/* {category.description} */}
                         </Typography>
                         <Link to={`/details`} style={{ textDecoration: 'none', color: 'inherit' }}>
                             <Button variant="contained" color="primary" >

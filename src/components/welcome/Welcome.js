@@ -5,6 +5,11 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+
 
 function Welcome() {
   return (
@@ -28,38 +33,42 @@ function Welcome() {
                   ETUDIANT INGENIEUR EN INFORMATIQUE
                 </Typography>
               </div>
-              <div>
-                <Typography variant="h5">
-                  Telephone:
-                </Typography>
-                <Typography variant="h6">
-                  +261 34 12 345 67
-                </Typography>
-              </div>
-              <div>
-                <Typography variant="h5">
-                  Email:
-                </Typography>
-                <Typography variant="h6">
-                  steve@yahoo.com
-                </Typography>
-              </div>
-              <div>
-                <Typography variant="h5">
-                  Adresse:
-                </Typography>
-                <Typography variant="h6">
-                  Antananarivo, Madagascar
-                </Typography>
-              </div>
-              <div>
-                <Typography variant="h5">
-                  Date de naissance:
-                </Typography>
-                <Typography variant="h6">
-                  01 Janvier 2000
-                </Typography>
-              </div>
+              <Stack direction="row" spacing={3} className="welcome_infos_row">
+                <div className="contact_infos_icon">
+                  <EmailIcon fontSize='2rem' />
+                </div>
+                <div>
+                  <h5>Email:</h5>
+                  <h6> adress@yahoo.com </h6>
+                </div>
+              </Stack>
+              <Stack direction="row" spacing={3} className="welcome_infos_row">
+                <div className="contact_infos_icon">
+                  <PhoneIcon fontSize='2rem' />
+                </div>
+                <div>
+                  <h5>Telephone:</h5>
+                  <h6>6 99 99 99 99 </h6>
+                </div>
+              </Stack>
+              <Stack direction="row" spacing={3} className="welcome_infos_row">
+                <div className="contact_infos_icon">
+                  <CalendarMonthIcon fontSize='2rem' />
+                </div>
+                <div>
+                  <h5>Date de naissance:</h5>
+                  <h6>30 Octobre 2003</h6>
+                </div>
+              </Stack>
+              <Stack direction="row" spacing={3} className="welcome_infos_row">
+                <div className="contact_infos_icon">
+                  <LocationOnIcon fontSize='2rem' />
+                </div>
+                <div>
+                  <h5> Adresse :</h5>
+                  <h6> Nantes, France </h6>
+                </div>
+              </Stack>
             </Stack>
           </Stack>
           <Stack direction='row' spacing={4} className="welcome-social-media-container">

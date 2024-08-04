@@ -66,7 +66,7 @@ function Contact() {
                                     <LocationOnIcon fontSize='2rem' />
                                 </div>
                                 <div>
-                                    <h5> localisation :</h5>
+                                    <h5> Adresse :</h5>
                                     <h6> Nantes, France </h6>
                                 </div>
                             </Stack>
@@ -92,14 +92,10 @@ function Contact() {
                             </Stack>
                         </div>
                         <div>
-                            <Stack direction="column" spacing={2} className="contact_form">
+                            <Stack direction="column" spacing={3} className="contact_form">
                                 <Stack direction="row" spacing={3} className="contact_form_input">
                                     <TextField id="outlined-basic" label="Nom" variant="outlined" size='small' sx={{ width: '49%' }} />
                                     <TextField id="outlined-basic" label="Prenom" variant="outlined" size='small' sx={{ width: '49%' }} />
-                                </Stack>
-                                <Stack direction="row" spacing={3} className="contact_form_input">
-                                    <TextField id="outlined-basic" label="Email" variant="outlined" size='small' sx={{ width: '50%' }} />
-                                    <TextField id="outlined-basic" label="Objet" variant="outlined" size='small' sx={{ width: '50%' }} />
                                 </Stack>
                                 <TextField
                                     id="outlined-multiline-static"

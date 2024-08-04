@@ -41,6 +41,11 @@ function Header() {
             </Link>
           </Stack>
           <Stack direction="row" spacing={4}>
+            <Link to="/a-propos" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Typography variant="h6">
+                A PROPOS
+              </Typography>
+            </Link>
             <Link to="/experience" style={{ textDecoration: 'none', color: 'inherit' }}>
               <Typography variant="h6">
                 EXPERIENCE
@@ -54,11 +59,6 @@ function Header() {
             <Link to="/projets" style={{ textDecoration: 'none', color: 'inherit' }}>
               <Typography variant="h6">
                 PROJETS
-              </Typography>
-            </Link>
-            <Link to="/details" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Typography variant="h6">
-                EXPERTISE
               </Typography>
             </Link>
             <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
