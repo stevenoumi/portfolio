@@ -48,6 +48,7 @@
 .contact_infos_container {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     width: 100%;
     height: 100%;
@@ -91,7 +92,7 @@
     justify-content: center;
     position: relative;
     left: 9%;
-    padding: 0.5%;
+    padding: 1.5%;
     padding-bottom: 1%;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;

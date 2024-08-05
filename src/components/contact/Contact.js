@@ -21,7 +21,7 @@ function Contact() {
                         <CardMedia
                             component="img"
                             alt="profile picture"
-                            src="profile.png"
+                            src="my-avatar.png"
                             className='contact_profile_picture'
                         />
                         <div>
