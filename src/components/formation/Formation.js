@@ -154,7 +154,7 @@ function Formation() {
                 <MenuBookOutlinedIcon fontSize='large' />
                 <h1> Mes formations</h1>
               </Stack>
-              <Divider sx={{ width: '6%', backgroundColor: "#f9f9f9", height: '4px', borderRadius: '5px' }} />
+              <Divider sx={{ width: '6%', backgroundColor: "#FFBC5E", height: '4px', borderRadius: '5px' }} />
             </div>
             <div >
               <Stepper orientation="vertical" position="fixed">

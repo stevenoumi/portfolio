@@ -170,7 +170,7 @@
 
 .formation_infos_icon {
   font-size: 1.5rem !important;
-  color: #bbbec2;
+  color: #FFBC5E;
   margin: 10%;
   background-color: #495057;
   border-radius: 20%;
@@ -182,7 +182,7 @@
 }
 
 .formation_infos_row_icon {
-
+  color: #FFBC5E;
   margin-top: 10% !important;
 }
 
@@ -222,4 +222,30 @@
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
   color: #1976d2 !important;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  fill: #f9f9f9  !important ;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.38);
+  align-items: start;
+}
+
+.css-8t49rw-MuiStepConnector-line {
+  display: block;
+  border-color: #f9f9f9 ;
+  border-left-style: solid;
+  border-left-width: 5px !important;
+  min-height: 10px !important;
+  margin-bottom: 10px;
+}
+
+.css-117w1su-MuiStepIcon-text {
+  fill: green !important ;
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+.css-14sza3e-MuiStepLabel-root {
+  align-items: start !important;
+
 }

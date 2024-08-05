@@ -127,7 +127,7 @@ function Experience() {
                 <MenuBookOutlinedIcon fontSize='large' />
                 <h1> Mes experiences</h1>
               </Stack>
-              <Divider sx={{ width: '6%', backgroundColor: "#f9f9f9", height: '4px', borderRadius: '5px' }} />
+              <Divider sx={{ width: '6%', backgroundColor: "#FFBC5E", height: '4px', borderRadius: '5px' }} />
               <Stepper orientation="vertical" position="fixed" sx={{marginTop: '5%'}}>
                 {experiences.map((experience, index) => (
                   <Step key={experience.label}>
@@ -141,6 +141,7 @@ function Experience() {
                         <IconButton onClick={() => handleExpandClick(index)}>
                           {expandedStep === index ? <ExpandLess /> : <ExpandMore />}
                         </IconButton>
+                        
                       </Stack>
                     </StepLabel>
 

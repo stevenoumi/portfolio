@@ -170,7 +170,7 @@
 
 .experience_infos_icon {
   font-size: 1.5rem !important;
-  color: #f9f9f9;
+  color: #FFBC5E;
   margin: 10%;
   background-color: #495057;
   border-radius: 20%;
@@ -182,7 +182,7 @@
 }
 
 .experience_infos_row_icon {
-
+  color: #FFBC5E;
   margin-top: 10% !important;
 }
 
@@ -224,3 +224,7 @@
 .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
   color: #f9f9f9 !important;
 }
+
+
+
+

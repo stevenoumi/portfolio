@@ -148,7 +148,7 @@
 
 .contact_infos_icon {
     font-size: 1.5rem !important;
-    color: #bbbec2 ;
+    color: #FFBC5E;
     margin: 10%;
     background-color: #495057;
     border-radius: 20%;
@@ -162,6 +162,7 @@
 .contact_infos_row_icon {
    
     margin-top: 10% !important ;
+    color: #FFBC5E;
 }
 
 .contact_map {

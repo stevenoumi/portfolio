@@ -9,39 +9,56 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InfoIcon from '@mui/icons-material/Info';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import { Divider } from '@mui/material';
+import { Card, Divider } from '@mui/material';
 import { CardMedia } from "@mui/material";
 import { Stack } from "@mui/material";
 import './about.css';
 
 const recommendations = [
   {
-    name: 'Personne A',
-    contact: '6 99 99 99 99',
-    relation: 'Collègue de travail'
+    name: 'Michel Dupont',
+    date: '12/12/2021',
+    relation: 'Collègue de travail',
+    message: 'Steve est un excellent ingénieur logiciel qui a une grande passion pour le développement web. Il est très compétent et a une grande capacité à résoudre des problèmes complexes. Je le recommande vivement pour tout projet de développement web.',
+    image: 'avatar-1.png'
   },
   {
-    name: 'Personne B',
-    contact: '6 88 88 88 88',
-    relation: 'Supérieur hiérarchique'
+    name: 'franck Martin',
+    date: '12/12/2021',
+    relation: 'Supérieur hiérarchique',
+    message: 'Steve est un excellent ingénieur logiciel qui a une grande passion pour le développement web. Il est très compétent et a une grande capacité à résoudre des problèmes complexes. Je le recommande vivement pour tout projet de développement web.',
+    image: 'avatar-2.png'
   },
   {
-    name: 'Personne C',
-    contact: '6 77 77 77 77',
-    relation: 'Mentor'
+    name: 'alice Margot',
+    date: '12/12/2021',
+    relation: 'Mentor',
+    message: 'Steve est un excellent ingénieur logiciel qui a une grande passion pour le développement web. Il est très compétent et a une grande capacité à résoudre des problèmes complexes. Je le recommande vivement pour tout projet de développement web.',
+    image: 'avatar-3.png'
   },
   {
-    name: 'Personne D',
-    contact: '6 66 66 66 66',
-    relation: 'Client'
+    name: 'Olivier Dupuis',
+    date: '12/12/2021',
+    relation: 'Client',
+    message: 'Steve est un excellent ingénieur logiciel qui a une grande passion pour le développement web. Il est très compétent et a une grande capacité à résoudre des problèmes complexes. Je le recommande vivement pour tout projet de développement web.',
+    image: 'avatar-4.png'
+
   },
   {
-    name: 'Personne E',
-    contact: '6 55 55 55 55',
-    relation: 'Ancien collègue'
+    name: 'Ferdinand Lenoir',
+    date: '12/12/2021',
+    relation: 'Ancien collègue',
+    message: 'Steve est un excellent ingénieur logiciel qui a une grande passion pour le développement web. Il est très compétent et a une grande capacité à résoudre des problèmes complexes. Je le recommande vivement pour tout projet de développement web.',
+    image: 'my-avatar.png'
   },
-  // Ajoutez autant de recommandations que nécessaire
 ];
+const description = "Étudiant en ingénierie logicielle avec une passion pour l'innovation, je me spécialise dans le développement front-end (React, Angular), back-end (Node.js, PHP, Java) et mobile (Flutter, React Native). Mon expertise en DevOps, incluant AWS, Google Cloud, et Docker, complète mes compétences. Enthousiaste par la cybersécurité, l'administration système, et l'intelligence artificielle, je manie également les technologies Big Data (Hadoop, Spark, Tableau, Talend). Actuellement, je perfectionne mes compétences avec Elasticsearch, Kibana, Logstash, et PfSense. Toujours avide de nouveaux défis, je suis déterminé à utiliser mes compétences pour résoudre des problèmes complexes et explorer les dernières innovations technologiques.";
+// Fonction pour tronquer le message
+const truncateMessage = (message, wordLimit) => {
+  const words = message.split(' ');
+  if (words.length <= wordLimit) return message;
+  return `${words.slice(0, wordLimit).join(' ')}...`;
+};
 
 function About() {
 
@@ -114,14 +131,14 @@ function About() {
           <Stack direction="column" spacing={2}>
             <div >
               <Stack direction="row" spacing={2} className="about__header">
-                <InfoIcon fontSize='large' />
+                <InfoIcon fontSize='large' color='#FFBC5E' />
                 <h1> A propos de moi</h1>
               </Stack>
-              <Divider sx={{ width: '6%', backgroundColor: "#f9f9f9", height: '4px', borderRadius: '5px' }} />
+              <Divider sx={{ width: '6%', backgroundColor: "#FFBC5E", height: '4px', borderRadius: '5px' }} />
             </div>
-            <div >
-              <p>
-                I am a software engineer with experience in front-end development, back-end development, and mobile application development. I am passionate about creating user-friendly applications and I am always looking to learn new technologies. I have experience working with React, Angular, Node.js, and Flutter.
+            <div className='about_description_container'>
+              <p className='about_description'>
+                {description}
               </p>
             </div>
             <div>
@@ -129,41 +146,61 @@ function About() {
               <Stack direction="column" spacing={2}>
                 <Stack direction="row" spacing={5}>
                   <Stack direction="row" spacing={3} className="about_form_expertise">
-                    <div className="about_infos_icon">
-                      <PhoneIcon fontSize='2rem' />
+                    <div>
+                      <CardMedia
+                        component="img"
+                        alt="profile picture"
+                        src="icon-design.svg"
+                        sx={{ width: 50, height: 50 }}
+                      />
                     </div>
                     <div>
-                      <h5>Telephone:</h5>
-                      <h6>6 99 99 99 99 </h6>
+                      <h5>Web design </h5>
+                      <h6>The most modern and high-quality design made at a professional level.  </h6>
                     </div>
                   </Stack>
                   <Stack direction="row" spacing={3} className="about_form_expertise">
-                    <div className="about_infos_icon">
-                      <PhoneIcon fontSize='2rem' />
+                    <div>
+                      <CardMedia
+                        component="img"
+                        alt="profile picture"
+                        src="icon-dev.svg"
+                        sx={{ width: 50, height: 50 }}
+                      />
                     </div>
                     <div>
-                      <h5>Telephone:</h5>
-                      <h6>6 99 99 99 99 </h6>
+                      <h5>Web development </h5>
+                      <h6>The most modern and high-quality design made at a professional level.  </h6>
                     </div>
                   </Stack>
                 </Stack>
                 <Stack direction="row" spacing={5}>
                   <Stack direction="row" spacing={3} className="about_form_expertise">
-                    <div className="about_infos_icon">
-                      <PhoneIcon fontSize='2rem' />
+                    <div>
+                      <CardMedia
+                        component="img"
+                        alt="profile picture"
+                        src="icon-app.svg"
+                        sx={{ width: 50, height: 50 }}
+                      />
                     </div>
                     <div>
-                      <h5>Telephone:</h5>
-                      <h6>6 99 99 99 99 </h6>
+                      <h5>Mobile apps development </h5>
+                      <h6>The most modern and high-quality design made at a professional level.  </h6>
                     </div>
                   </Stack>
                   <Stack direction="row" spacing={3} className="about_form_expertise">
-                    <div className="about_infos_icon">
-                      <PhoneIcon fontSize='2rem' />
+                    <div>
+                      <CardMedia
+                        component="img"
+                        alt="profile picture"
+                        src="icon-photo.svg"
+                        sx={{ width: 50, height: 50 }}
+                      />
                     </div>
                     <div>
-                      <h5>Telephone:</h5>
-                      <h6>6 99 99 99 99 </h6>
+                      <h5> Cloud computing </h5>
+                      <h6>The most modern and high-quality design made at a professional level.  </h6>
                     </div>
                   </Stack>
                 </Stack>
@@ -178,15 +215,13 @@ function About() {
                       <CardMedia
                         component="img"
                         alt="profile picture"
-                        src="my-avatar.png"
+                        src={recommendation.image}
                         className='about_form_recomandations_item_avatar'
-                        wi
 
                       />
-                      <div>
-                        <h5>{recommendation.name}</h5>
-                        <h6>{recommendation.contact}</h6>
-                        <p>{recommendation.relation}</p>
+                      <div >
+                        <h3>{recommendation.name}</h3>
+                        <h6>{truncateMessage(recommendation.message, 25)}</h6>
                       </div>
                     </Stack>
                   ))}
@@ -196,44 +231,8 @@ function About() {
             <div>
               <h1> Mes prix et distictions </h1>
             </div>
-            <Stack direction="row" spacing={3} className="about_infos_row">
-              <div className="about_infos_icon">
-                <EmojiEventsIcon fontSize='2rem' />
-              </div>
-              <div className="about_form_awards ">
-                <h5>Telephone:</h5>
-                <h6>6 99 99 99 99 </h6>
-              </div>
-            </Stack>
-            <Stack direction="row" spacing={3} className="about_infos_row">
-              <div className="about_infos_icon">
-                <EmojiEventsIcon fontSize='2rem' />
-              </div>
-              <div className="about_form_awards ">
-                <h5>Telephone:</h5>
-                <h6>6 99 99 99 99 </h6>
-              </div>
-            </Stack>
-            <Stack direction="row" spacing={3} className="about_infos_row">
-              <div className="about_infos_icon">
-                <EmojiEventsIcon fontSize='2rem' />
-              </div>
-              <div className="about_form_awards ">
-                <h5>Telephone:</h5>
-                <h6>6 99 99 99 99 </h6>
-              </div>
-            </Stack>
-            <Stack direction="row" spacing={3} className="about_infos_row">
-              <div className="about_infos_icon">
-                <EmojiEventsIcon fontSize='2rem' />
-              </div>
-              <div className="about_form_awards ">
-                <h5>Telephone:</h5>
-                <h6>6 99 99 99 99 </h6>
-              </div>
-            </Stack>
+            
             <div>
-
             </div>
           </Stack>
         </div>
