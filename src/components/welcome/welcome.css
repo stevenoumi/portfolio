@@ -2,11 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: 100vw 85vh;
-    background-position: top center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url("/public/unicolor.png");
     overflow: hidden;
     margin-top: 15vh;
 }
